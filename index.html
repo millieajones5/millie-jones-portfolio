@@ -7,44 +7,125 @@
 :root{--cyan:#30C5F4;--black:#0A0E0B;--pink:#CD3366;--yellow:#E8E014;--display:"Arial Rounded MT Bold","Trebuchet MS",Arial,sans-serif;--body:"Segoe UI",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cyan);color:var(--black);font:18px/1.45 var(--body)}img{display:block;max-width:100%}
 header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding:14px 22px;background:var(--black);color:white}.brand{font:900 1rem var(--display);text-transform:uppercase;text-decoration:none;color:white}nav{display:flex;flex-wrap:wrap;gap:8px}nav a{padding:7px 12px;background:white;color:var(--black);border-radius:30px;text-decoration:none;font-size:.82rem;font-weight:800;text-transform:uppercase}nav a:hover{background:var(--pink);color:white}
-.hero{min-height:90vh;padding:36px 22px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.hero-copy{display:flex;flex-direction:column;justify-content:space-between;min-height:70vh}.kicker,.name,.label{font-weight:900;text-transform:uppercase}.hero h1{font:900 clamp(4.5rem,14vw,12rem)/.76 var(--display);letter-spacing:-.07em;text-transform:uppercase;margin:22px 0}.name{font:900 clamp(1.5rem,3vw,2.6rem) var(--display)}.hero-art{display:grid;place-items:center;padding:18px;background:var(--pink);border:5px solid var(--black);box-shadow:12px 12px 0 var(--black)}.hero-art img{width:100%;max-height:72vh;object-fit:contain;background:white}
+.hero{min-height:90vh;padding:36px 22px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.hero-copy{display:flex;flex-direction:column;justify-content:space-between;min-height:70vh}.kicker,.name,.label{font-weight:900;text-transform:uppercase}.hero h1{font:900 clamp(4.5rem,14vw,12rem)/.76 var(--display);letter-spacing:-.07em;text-transform:uppercase;margin:22px 0}.name{font:900 clamp(1.5rem,3vw,2.6rem) var(--display)}.hero-art{display:grid;place-items:center;min-width:0;min-height:0;padding:0;background:transparent;border:0;box-shadow:none}.hero-art img{width:100%;height:calc(72vh + 46px);max-height:calc(72vh + 46px);object-fit:contain;background:transparent}
 section{padding:70px 22px;border-top:5px solid var(--black)}.label{margin-bottom:18px;font-family:var(--display)}.about{background:var(--black);color:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1250px;margin:auto}.about h2,.project h2,.contact h2{font:900 clamp(3.4rem,9vw,8rem)/.82 var(--display);letter-spacing:-.055em;text-transform:uppercase;margin:0}.about p{font-size:clamp(1rem,1.6vw,1.25rem);margin:0 0 18px}
-.project{max-width:1400px;margin:0 auto 76px;padding:26px;border:5px solid var(--black);box-shadow:12px 12px 0 var(--black)}#logos{background:var(--pink)}#social{background:var(--cyan)}#print{background:var(--yellow)}#branding{background:white}.project-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.project-heading p{max-width:300px;font-weight:800;text-transform:uppercase}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.work-card{min-width:0}.work-image{display:block;padding:8px;background:white;border:4px solid var(--black);transition:transform .18s,box-shadow .18s}.work-image:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--black)}.work-image img{width:100%;height:360px;object-fit:contain}.work-card h3{font:900 1.45rem/1.1 var(--display);text-transform:uppercase;margin:14px 0 6px}.work-card p{margin:0;max-width:58ch}.image-note{font-size:.8rem;font-weight:700;text-transform:uppercase;margin-top:8px}
+.project{max-width:1400px;margin:0 auto 76px;padding:26px;border:5px solid var(--black);box-shadow:12px 12px 0 var(--black)}#logos{background:var(--pink)}#social{background:var(--cyan)}#print{background:var(--yellow)}.project-heading{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}.project-heading p{max-width:300px;font-weight:800;text-transform:uppercase}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.work-card{min-width:0}.work-image{display:block;padding:0;background:transparent;border:0;transition:transform .18s,box-shadow .18s}.work-image:hover{transform:translateY(-3px);box-shadow:6px 6px 0 var(--black)}.work-image img{width:100%;height:360px;object-fit:contain;background:inherit}.work-card h3{font:900 1.45rem/1.1 var(--display);text-transform:uppercase;margin:14px 0 6px}.work-card p{margin:0;max-width:58ch}.image-note{font-size:.8rem;font-weight:700;text-transform:uppercase;margin-top:8px}
 .contact{background:var(--pink);min-height:65vh}.contact p{font-size:1.2rem;margin-top:28px}.contact a{font:900 clamp(1.2rem,3vw,2.4rem) var(--display);overflow-wrap:anywhere;color:var(--black)}footer{padding:18px 22px;background:var(--black);color:white;font-weight:800;text-transform:uppercase;font-size:.85rem}
 @media(max-width:800px){header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{min-height:48vh}.hero-art{min-height:35vh}.about-grid{grid-template-columns:1fr;gap:28px}.project-heading{display:block}.project-heading p{margin-top:18px}.project-grid{grid-template-columns:1fr}.project{padding:16px}.work-image img{height:auto;max-height:480px;min-height:180px}}
+
+/* Section title with the portfolio's own icon beside the heading */
+.project-heading{display:grid;grid-template-columns:auto 1fr;align-items:center;justify-content:start;gap:18px;margin-bottom:34px}
+.project-heading .section-icon{width:72px;height:72px;object-fit:cover;object-position:center;border:0;flex:none}
+.project-heading .heading-copy{min-width:0}
+.project-heading h2{font-size:clamp(2.7rem,6vw,5.5rem);line-height:.9}
+.project-heading p{max-width:760px;margin:14px 0 0;font-weight:500;text-transform:none;font-size:1.05rem}
+.project-grid{display:flex;flex-direction:column;gap:42px}
+.work-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(22px,4vw,56px);min-width:0}
+.work-card:nth-child(even) .work-image{order:2}
+.work-card:nth-child(even) .work-copy{order:1}
+.work-image{display:flex;align-items:center;justify-content:center;min-width:0;padding:0;background:transparent;border:0;transition:transform .18s}
+.work-image:hover{transform:translateY(-3px);box-shadow:none}
+.work-image img{width:100%;height:clamp(280px,34vw,440px);object-fit:contain;background:transparent}
+.work-copy h3{font:900 clamp(1.6rem,3vw,2.5rem)/1.02 var(--display);text-transform:uppercase;margin:0 0 14px}
+.work-copy p{margin:0;max-width:58ch;font-size:1.05rem}
+.work-copy .step-label{display:block;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+@media(max-width:800px){
+ .project-heading{display:grid;grid-template-columns:56px 1fr;align-items:start;gap:14px}
+ .project-heading .section-icon{width:56px;height:56px}
+ .project-heading h2{font-size:clamp(2.4rem,10vw,4rem)}
+ .project-heading p{font-size:1rem}
+ .work-card{grid-template-columns:1fr;gap:18px}
+ .work-card:nth-child(even) .work-image,.work-card:nth-child(even) .work-copy{order:initial}
+ .work-image img{height:auto;max-height:480px;min-height:180px}
+ .work-copy h3{font-size:1.8rem}
+}
 </style></head><body>
 <header><a class="brand" href="#top">Millie Ann Jones</a><nav><a href="#about">About</a><a href="#logos">Logo Creation</a><a href="#social">Social Media</a><a href="#print">Print Design</a><a href="#contact">Contact</a></nav></header>
 <main id="top">
 <div class="hero"><div class="hero-copy"><p class="kicker">Graphic Design Portfolio</p><div><h1>Millie<br/>Ann<br/>Jones</h1><p class="name">Graphic Designer</p></div></div><div class="hero-art"><img alt="Graphic design portfolio artwork" src="image.jpg"/></div></div>
 <section class="about" id="about"><div class="label">01 / About Me</div><div class="about-grid"><div><h2>About<br/>Me</h2></div><div><p>I’m Millie Jones, a graphic designer based in Hampshire. My main focus is creating and applying brand identities, making sure they work well across different types of design.</p><p>Other work includes digital content such as social media posts and billboards, along with print designs like posters and leaflets. My preferred style is bold, flat graphics with bright colours, using simple but eye-catching visuals.</p><p>I enjoy experimenting with creative ideas and making designs that stand out. When I encounter design based problems, I think creatively to find a solution.</p></div></div></section>
 <section><div class="label">02 / Selected Work</div>
-<article class="project" id="logos"><div class="project-heading"><h2>Logo<br/>Creation</h2><p>Spring 2026 · Water-slide visual identity</p></div><div class="project-grid">
-<div class="work-card"><a class="work-image" href="image2.jpg" rel="noopener" target="_blank"><img alt="Eye symbol logo design" src="image2.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image3.jpg" rel="noopener" target="_blank"><img alt="Collection of illustrated logo concepts" src="image3.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image4.jpg" rel="noopener" target="_blank"><img alt="Logo sketches and symbol variations" src="image4.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image5.jpg" rel="noopener" target="_blank"><img alt="Grid of logo and colour concepts" src="image5.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image6.jpg" rel="noopener" target="_blank"><img alt="The Island Plunge logo applications" src="image6.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image7.jpg" rel="noopener" target="_blank"><img alt="The Island Plunge logo variations" src="image7.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image8.jpg" rel="noopener" target="_blank"><img alt="Promotional banner designs" src="image8.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image9.jpg" rel="noopener" target="_blank"><img alt="Illustrated Island Plunge shop concept" src="image9.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image10.jpg" rel="noopener" target="_blank"><img alt="Collection of logo designs" src="image10.jpg"/></a></div>
+<article class="project" id="logos">
+<div class="project-heading"><img class="section-icon" src="image2.jpg" alt=""/><div class="heading-copy"><h2>Logo Creation</h2><p>The aim of this project was to create a new visual identity for a pre-existing water slide at a children’s theme park. One of the main challenge was considering the theme park’s theming as a whole and to create a visual identity which appealed to the target audience. I also display other logos I have created for other projects.</p></div></div>
+<div class="project-grid">
+<div class="work-card">
+<a class="work-image" href="image2.jpg" rel="noopener" target="_blank"><img alt="Eye symbol logo design" src="image2.jpg"/></a>
+<div class="work-copy"><span class="step-label">Logo Creation</span><h3>Initial direction</h3><p>The aim of this project was to create a new visual identity for a pre-existing water slide at a children’s theme park.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image3.jpg" rel="noopener" target="_blank"><img alt="Collection of illustrated logo concepts" src="image3.jpg"/></a>
+<div class="work-copy"><span class="step-label">Thumbnails</span><h3>Thumbnails</h3><p>Here are some initial sketches of potential logo ideas, exploring different graphical elements related to the ride and area.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image4.jpg" rel="noopener" target="_blank"><img alt="Logo sketches and symbol variations" src="image4.jpg"/></a>
+<div class="work-copy"><span class="step-label">Digital Experimentation</span><h3>Digital experimentation</h3><p>Once creating sketches, I selected the three strongest logo’s with help of creatives around me. I then digitalised them using Illustrator.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image5.jpg" rel="noopener" target="_blank"><img alt="Grid of logo and colour concepts" src="image5.jpg"/></a>
+<div class="work-copy"><span class="step-label">Colour Experimentation</span><h3>Colour experimentation</h3><p>After selecting the most suitable logo, I experimented with different colour combinations. Whilst doing this, I ensured that the colours selected were suitable for the target audience, accessible and were selected for justifiable reasons. To do this, I used appropriate sources of inspiration.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image6.jpg" rel="noopener" target="_blank"><img alt="The Island Plunge logo applications" src="image6.jpg"/></a>
+<div class="work-copy"><span class="step-label">Final Logo</span><h3>Final logo</h3><p>This is the final logo and logo variants.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image7.jpg" rel="noopener" target="_blank"><img alt="The Island Plunge logo variations" src="image7.jpg"/></a>
+<div class="work-copy"><span class="step-label">Logo Variants</span><h3>Logo variations</h3><p>The final identity shown across its logo variants.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image8.jpg" rel="noopener" target="_blank"><img alt="Promotional banner designs" src="image8.jpg"/></a>
+<div class="work-copy"><span class="step-label">Mock Ups</span><h3>Mock ups</h3><p>The visual identity applied to promotional banner mock-ups.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image9.jpg" rel="noopener" target="_blank"><img alt="Illustrated Island Plunge shop concept" src="image9.jpg"/></a>
+<div class="work-copy"><span class="step-label">Sub-brand Logo</span><h3>Sub-brand logo</h3><p>This is a logo I have created for the sub-brand. The sub-brand is an ice-cream shop located in the main water slide area.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image10.jpg" rel="noopener" target="_blank"><img alt="Collection of logo designs" src="image10.jpg"/></a>
+<div class="work-copy"><span class="step-label">Other Logos</span><h3>Other logos</h3><p>I have created other logos too for different businesses. These logos used the same design process as previously mentioned and were created using Illustrator.</p></div>
+</div>
 </div></article>
-<article class="project" id="social"><div class="project-heading"><h2>Social Media</h2><p>January – February 2026 · CPR awareness campaign</p></div><div class="project-grid">
-<div class="work-card"><a class="work-image" href="image11.jpg" rel="noopener" target="_blank"><img alt="Phone-themed graphic illustration" src="image11.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image12.jpg" rel="noopener" target="_blank"><img alt="Illustration assets and character concepts" src="image12.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image13.jpg" rel="noopener" target="_blank"><img alt="Learn CPR storyboard sketches" src="image13.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image14.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign graphic" src="image14.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image15.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign poster layouts" src="image15.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image16.jpg" rel="noopener" target="_blank"><img alt="Learn CPR mobile social graphic" src="image16.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image17.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign bus stop mockup" src="image17.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image18.jpg" rel="noopener" target="_blank"><img alt="Learn CPR billboard mockup" src="image18.jpg"/></a></div>
+<article class="project" id="social">
+<div class="project-heading"><img class="section-icon" src="image11.jpg" alt=""/><div class="heading-copy"><h2>Social Media</h2><p>This was a project to encourage as many people as possible, in the UK, to learn how to perform CPR through the use of social media. The social media campaign had to have a clear narrative and then would be have to be adapted for different platforms such as print.</p></div></div>
+<div class="project-grid">
+<div class="work-card">
+<a class="work-image" href="image12.jpg" rel="noopener" target="_blank"><img alt="Illustration assets and character concepts" src="image12.jpg"/></a>
+<div class="work-copy"><span class="step-label">Character Thumbnails</span><h3>Character thumbnails</h3><p>Initial character and illustration ideas for the campaign.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image13.jpg" rel="noopener" target="_blank"><img alt="Learn CPR storyboard sketches" src="image13.jpg"/></a>
+<div class="work-copy"><span class="step-label">Social Media Thumbnails</span><h3>Social media thumbnails</h3><p>To move forward, I created simple thumbnails of what some social media posts would look like. This would include individual and carousel posts too. The designs were mainly made to be seen on Instagram.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image11.jpg" rel="noopener" target="_blank"><img alt="Phone-themed graphic illustration" src="image11.jpg"/></a>
+<div class="work-copy"><span class="step-label">Asset Creation</span><h3>Asset creation</h3><p>Once I had created the thumbnails and received feedback, I could move onto digitally creating the assets for the final outcomes.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image14.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign graphic" src="image14.jpg"/></a>
+<div class="work-copy"><span class="step-label">Instagram Posts</span><h3>Instagram posts</h3><p>These are some posts created for the campaign. These were included in a carousel.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image15.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign poster layouts" src="image15.jpg"/></a>
+<div class="work-copy"><span class="step-label">Digital Creation</span><h3>Digital creation</h3><p>Here are some posters created as part of the social media campaign, to further create awareness.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image16.jpg" rel="noopener" target="_blank"><img alt="Learn CPR mobile social graphic" src="image16.jpg"/></a>
+<div class="work-copy"><span class="step-label">Campaign Artwork</span><h3>Social media adaptation</h3><p>Social media artwork adapted for a mobile-phone format.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image17.jpg" rel="noopener" target="_blank"><img alt="Learn CPR campaign bus stop mockup" src="image17.jpg"/></a>
+<div class="work-copy"><span class="step-label">Campaign Mock-up</span><h3>Campaign mock-up</h3><p>The campaign applied to an outdoor advertising format.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image18.jpg" rel="noopener" target="_blank"><img alt="Learn CPR billboard mockup" src="image18.jpg"/></a>
+<div class="work-copy"><span class="step-label">Billboard</span><h3>Billboard</h3><p>The campaign applied to a billboard to further create awareness.</p></div>
+</div>
 </div></article>
-<article class="project" id="print"><div class="project-heading"><h2>Print Design</h2><p>October 2025 – Present · Posters and printed materials</p></div><div class="project-grid">
-<div class="work-card"><a class="work-image" href="image19.jpg" rel="noopener" target="_blank"><img alt="Pencil project icon on yellow background" src="image19.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image20.jpg" rel="noopener" target="_blank"><img alt="Pencil project development and design exploration" src="image20.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image21.jpg" rel="noopener" target="_blank"><img alt="Pencil campaign poster designs" src="image21.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image22.jpg" rel="noopener" target="_blank"><img alt="Dream-themed poster designs and mockups" src="image22.jpg"/></a></div>
-<div class="work-card"><a class="work-image" href="image23.jpg" rel="noopener" target="_blank"><img alt="Millie Jones graphic design personal branding" src="image23.jpg"/></a></div><div class="work-card"><a class="work-image" href="image24.jpg" rel="noopener" target="_blank"><img alt="Colourful printed cards and design mockup" src="image24.jpg"/></a></div></div></article>
+<article class="project" id="print">
+<div class="project-heading"><img class="section-icon" src="image19.jpg" alt=""/><div class="heading-copy"><h2>Print Design</h2><p>There are a few projects I have worked on where I have had to complete research, come up with ideas, create designs, prepare the document for print, and print. These are a few posters of different scales, which I have prepared for print, and have printed to be used in different ways.</p></div></div>
+<div class="project-grid">
+<div class="work-card">
+<a class="work-image" href="image20.jpg" rel="noopener" target="_blank"><img alt="Pencil project development and design exploration" src="image20.jpg"/></a>
+<div class="work-copy"><span class="step-label">Research and Ideation</span><h3>Research and ideation</h3><p>These are some examples of gathering visual inspiration and some thumbnails I have created for a children’s educational poster.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image21.jpg" rel="noopener" target="_blank"><img alt="Pencil campaign poster designs" src="image21.jpg"/></a>
+<div class="work-copy"><span class="step-label">Educational Poster</span><h3>Educational poster</h3><p>This is a series of children’s educational posters to be displayed in a learning environment.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image22.jpg" rel="noopener" target="_blank"><img alt="Dream-themed poster designs and mockups" src="image22.jpg"/></a>
+<div class="work-copy"><span class="step-label">Decorative Poster</span><h3>Decorative poster</h3><p>These are some posters which were made to be placed around an ice-cream parlour.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image24.jpg" rel="noopener" target="_blank"><img alt="Colourful printed cards and design mockup" src="image24.jpg"/></a>
+<div class="work-copy"><span class="step-label">Illustrative Cards</span><h3>Illustrative cards</h3><p>This is a pair of post cards, with my own illustration created. They were created to show of my preferred illustration style.</p></div>
+</div><div class="work-card">
+<a class="work-image" href="image23.jpg" rel="noopener" target="_blank"><img alt="Millie Jones graphic design personal branding" src="image23.jpg"/></a>
+<div class="work-copy"><span class="step-label">Business Cards</span><h3>Business cards and personal branding</h3><p>This is a set of business cards I have created for myself, which shows of my designs style, and provides my work details on the back.</p></div>
+</div>
+</div></article>
 </section>
 <section class="contact" id="contact"><div class="label">03 / Contact</div><h2>Let’s make<br/>something<br/>stand out.</h2><p>For design enquiries and portfolio opportunities, get in touch.</p><p><strong>Email</strong><br/><a href="mailto:millie.a.jones.5@gmail.com">millie.a.jones.5@gmail.com</a></p><p><strong>Phone</strong><br/><a href="tel:07738477727">07738477727</a></p></section>
 </main><footer>© 2026 Millie Ann Jones · Graphic Designer</footer></body></html>
